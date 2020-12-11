@@ -2,25 +2,26 @@ const express = require('express');
 const {createProxyMiddleware} = require('http-proxy-middleware');
 const app = express();
 const path = require('path');
-const port = 80;
+//const port = 80;
+const port = 3000;
 
 app.use(express.static('public'));
 
-app.use('/api/reviews/', createProxyMiddleware({
-  target: 'http://localhost:3001',
-  changeOrigin: true
-}));
+// app.use('/api/reviews/', createProxyMiddleware({
+//   target: 'http://localhost:3001',
+//   changeOrigin: true
+// }));
 
-//copy and paste for other routes
-app.use('/api/seller/', createProxyMiddleware({
-  target: 'http://localhost:3002',
-  changeOrigin: true
-}))
+// //copy and paste for other routes
+// app.use('/api/seller/', createProxyMiddleware({
+//   target: 'http://localhost:3002',
+//   changeOrigin: true
+// }))
 
-app.use('/api/images/', createProxyMiddleware({
-  target: 'http://localhost:3003',
-  changeOrigin: true
-}))
+// app.use('/api/images/', createProxyMiddleware({
+//   target: 'http://localhost:3003',
+//   changeOrigin: true
+// }))
 
 app.use('/api/products/', createProxyMiddleware({
   target: 'http://localhost:3004',
