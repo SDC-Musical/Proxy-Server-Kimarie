@@ -1,5 +1,5 @@
 const express = require('express');
-const {createProxyMiddleware} = require('http-proxy-middleware');
+const { createProxyMiddleware } = require('http-proxy-middleware');
 const app = express();
 const path = require('path');
 const morgan = require('morgan');
@@ -15,7 +15,12 @@ app.use('/products', createProxyMiddleware({
   pathRewrite: { '^/products' : '' },
 }));
 
-app.use('/:id', (req, res) => {
+app.use('/api/products', createProxyMiddleware({
+  target: 'http://localhost:3004/',
+  changeOrigin: true,
+}));
+
+app.get('/:id', (req, res) => {
   res.sendFile(path.join(__dirname,'../public/index.html'));
 });
 
