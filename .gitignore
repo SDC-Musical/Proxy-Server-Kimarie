@@ -1,6 +1,6 @@
 node_modules
 
 #Testing
-newRelicKey.js
+newrelic.js
 K6/getScript.js
 K6/putScript.js
