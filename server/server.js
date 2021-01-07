@@ -17,6 +17,11 @@ app.use('/api/products', createProxyMiddleware({
   changeOrigin: true,
 }));
 
+app.use('/api/update', createProxyMiddleware({
+  target: 'http://localhost:3004/',
+  changeOrigin: true,
+}));
+
 app.get('/title.js', (req, res) => {
   axios.get('http://localhost:3004/products/1/title.js')
   .then((response) => {
