@@ -1,1 +1,8 @@
 node_modules
+
+#Testing
+newrelic.js
+newrelic_agent.log
+K6
+K6/getScript.js
+K6/putScript.js
