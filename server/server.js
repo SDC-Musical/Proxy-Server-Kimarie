@@ -4,25 +4,25 @@ const { createProxyMiddleware } = require('http-proxy-middleware');
 const app = express();
 const path = require('path');
 const axios = require('axios');
-const morgan = require('morgan');
-//const port = 80;
-const port = 3000;
+//const morgan = require('morgan');
+const port = 80;
+//const port = 3000;
 
 app.use(express.static('public'));
-app.use(morgan('dev'));
+//app.use(morgan('dev'));
 
 app.use('/api/products', createProxyMiddleware({
-  target: 'http://localhost:3004/',
+  target: 'http://18.144.74.123/',
   changeOrigin: true,
 }));
 
 app.use('/api/update', createProxyMiddleware({
-  target: 'http://localhost:3004/',
+  target: 'http://18.144.74.123/',
   changeOrigin: true,
 }));
 
 app.get('/title.js', (req, res) => {
-  axios.get('http://localhost:3004/products/1/title.js')
+  axios.get('http://18.144.74.123/products/1/title.js')
   .then((response) => {
     res.send(response.data);
   })
@@ -33,7 +33,7 @@ app.get('/title.js', (req, res) => {
 });
 
 app.get('/description.js', (req, res) => {
-  axios.get('http://localhost:3004/products/1/description.js')
+  axios.get('http://18.144.74.123/products/1/description.js')
   .then((response) => {
     res.send(response.data);
   })
@@ -44,7 +44,7 @@ app.get('/description.js', (req, res) => {
 });
 
 app.get('/specs.js', (req, res) => {
-  axios.get('http://localhost:3004/products/1/specs.js')
+  axios.get('http://18.144.74.123/products/1/specs.js')
   .then((response) => {
     res.send(response.data);
   })
