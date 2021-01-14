@@ -5,8 +5,7 @@ const app = express();
 const path = require('path');
 const axios = require('axios');
 //const morgan = require('morgan');
-const port = 80;
-//const port = 3000;
+const port = 3000;
 
 app.use(express.static('public'));
 //app.use(morgan('dev'));
