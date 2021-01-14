@@ -10,21 +10,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Team-Structure/proxy-server-AB.git"
+    "url": "git+https://github.com/SDC-Musical/Proxy-Server-Kimarie"
   },
   "author": "KHB",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Team-Structure/proxy-server-AB/issues"
+    "url": "https://github.com/SDC-Musical/Proxy-Server-Kimarie"
   },
-  "homepage": "https://github.com/Team-Structure/proxy-server-AB#readme",
+  "homepage": "https://github.com/SDC-Musical/Proxy-Server-Kimarie#readme",
   "dependencies": {
     "axios": "^0.21.1",
     "express": "^4.17.1",
     "http-proxy-middleware": "^1.0.6",
-    "morgan": "^1.10.0",
-    "newrelic": "^7.1.0",
-    "nodemon": "^2.0.6",
     "path": "^0.12.7",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
@@ -36,6 +33,9 @@
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jsx-a11y": "^6.3.1",
     "eslint-plugin-react": "^7.21.4",
-    "eslint-plugin-react-hooks": "^4.1.2"
+    "eslint-plugin-react-hooks": "^4.1.2",
+    "morgan": "^1.10.0",
+    "newrelic": "^7.1.0",
+    "nodemon": "^2.0.6"
   }
 }
